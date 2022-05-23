@@ -1,10 +1,10 @@
+package com.login;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 
-package javaapplication14;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -206,7 +206,7 @@ class  Login extends Register {
 }
     
 }
-public class JavaApplication14 extends Register {
+public class app extends Register {
 
     /**
      * @param args the command line arguments
@@ -214,14 +214,16 @@ public class JavaApplication14 extends Register {
     public static void main(String[] args) {
         Scanner asku  = new Scanner(System.in); 
           System.out.println("Welcome Guest Please type Login or Register to continue");
+          System.out.println(" 1 - register \n 2 for login");
+          
           System.out.print(":");
-          String askuform = asku.next();
+          int askuform = asku.nextInt();
            System.out.print("\n");
            
-           if(askuform.equals("register")){
+           if(askuform == 2){
                Register reg = new Register();
                reg.ask();
-           }else if(askuform.equals("login")){
+           }else if(askuform == 1) {
                Login reg = new Login();
                reg.ask();
            }
